@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 class Announcer extends Component {
     static propTypes = {
         text: PropTypes.string,
-        politeness: PropTypes.string,
+        politeness: PropTypes.string
     }
 
     static defaultProps = {
