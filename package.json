@@ -1,0 +1,23 @@
+{
+  "name": "react-a11y-announcer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/Announcer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thinkcompany/react-a11y-announcer.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thinkcompany/react-a11y-announcer/issues"
+  },
+  "homepage": "https://github.com/thinkcompany/react-a11y-announcer#readme",
+  "dependencies": {
+    "prop-types": "^15.5.10",
+    "react": "^15.5.4"
+  }
+}
