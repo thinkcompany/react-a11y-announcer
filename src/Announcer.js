@@ -16,7 +16,11 @@ class Announcer extends Component {
 
         return (
             <div aria-live={politeness}>
-                <p>{text}</p>
+                {
+                    text.length ?
+                    <p>{text}</p> :
+                    null
+                }
             </div>
         )
     }
