@@ -17,7 +17,7 @@ class App extends Component {
 
   handleClick() {
     this.setState(prevState => ({
-      announcement: 'Here\'s a new annoucement!'
+      announcement: 'Here\'s a new announcement!'
     }));
   }
 
