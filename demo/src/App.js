@@ -17,7 +17,7 @@ class App extends Component {
 
   handleClick() {
     this.setState(prevState => ({
-      announcement: 'Here\'s a new annoucement!'
+      announcement: 'Here\'s a new announcement!'
     }));
   }
 
@@ -28,7 +28,7 @@ class App extends Component {
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
-          <button type="button" onClick={this.handleClick}>Trigger new annoucement</button>
+          <button type="button" onClick={this.handleClick}>Trigger new announcement</button>
         </div>
       </div>
     );
