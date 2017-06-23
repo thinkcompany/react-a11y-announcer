@@ -6,7 +6,8 @@
   "scripts": {
     "build": "rm -rf dist && mkdir dist && babel src -d dist",
     "demo": "rm -rf demo/src/dist && mkdir demo/src/dist && babel src -d demo/src/dist",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
