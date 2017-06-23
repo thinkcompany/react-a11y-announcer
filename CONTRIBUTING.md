@@ -29,6 +29,6 @@ Before creating a pull request, please ensure that an issue exists for the corre
 Things that will increase the chances that your pull request is accepted:
 
 * Include tests for your code
-* Follow the Think Company [development standards](https://bitbucket.org/thinkcompany/think_dev-standards/src/72ba3233dff0accd9781e200cafcc599352da1cd/development-standards/?at=master)
+* Follow the Think Company [development standards](http://standards.dev.thinkcompany.com/)
 * Provide a thorough description of your fix or feature, as well as steps for testing the changes
 * Reference the issue (or issues) that the pull request is addressing

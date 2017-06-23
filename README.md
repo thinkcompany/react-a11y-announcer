@@ -1,4 +1,4 @@
-# React Announcer
+# react-a11y-announcer
 
 Welcome to React Announcer from Think Company.
 
@@ -6,7 +6,7 @@ This is a React component that demonstrates how to dynamically add announcements
 
 ## Building and running the demo
 
-We included a demo that shows you how the component will behave when added to a page. To run the demo:
+We included a demo, a standard `create-react-app` application, that shows you how the component will behave when added to a page. To run the demo:
 
 * Clone this repo locally
 * cd into the `demo` directory
