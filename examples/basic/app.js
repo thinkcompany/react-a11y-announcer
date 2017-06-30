@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import ReactDOM from 'react-dom';
 
-import Announcer from './dist/Announcer';
+import Announcer from '../../src/Announcer';
 
 class App extends Component {
   constructor(props) {
@@ -26,8 +25,7 @@ class App extends Component {
       <div className="App">
         <Announcer text={this.state.announcement} />
         <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+          <h2>Basic Announcer Example</h2>
           <button type="button" onClick={this.handleClick}>Trigger new announcement</button>
         </div>
       </div>
@@ -35,4 +33,6 @@ class App extends Component {
   }
 }
 
-export default App;
+ReactDOM.render(<App/>, document.getElementById('container'))
+
+if (module.hot) { module.hot.accept() }
