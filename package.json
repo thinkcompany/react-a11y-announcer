@@ -1,6 +1,6 @@
 {
   "name": "react-a11y-announcer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "dist/Announcer.js",
   "scripts": {
@@ -9,7 +9,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublish": "npm run build"
   },
-  "files": ["dist/"],
+  "files": [
+    "dist/"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/thinkcompany/react-a11y-announcer.git"
