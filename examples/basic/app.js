@@ -32,7 +32,7 @@ class App extends Component {
         <Announcer text={this.state.announcement} />
         <div className="App-header">
           <h2>Basic Announcer Example</h2>
-          <button type="button" onClick={ () => this.handleClick('test')}>Trigger new announcement</button>
+          <button type="button" onClick={ () => this.handleClick('Here\'s a new announcement!')}>Trigger new announcement</button>
         </div>
       </div>
     );
