@@ -17,6 +17,18 @@ Press the "Trigger new announcement" button to add the announcement to the page.
 
 ## Using the Announcer 
 
+**Install from npm**
+
+`npm install react-a11y-announcer --save`
+
+**Import Announcer**
+
+```javascript
+
+import Announcer from 'react-a11y-announcer';
+
+```
+
 **Create a state to pass to the announcer's props**
 
 ```javascript
