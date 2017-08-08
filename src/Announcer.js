@@ -2,13 +2,32 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 class Announcer extends Component {
+
+    constructor(props) {
+      super(props);
+      this.state = {
+        text: ''
+      }
+    }
+
     static propTypes = {
-        text: PropTypes.string,
-        politeness: PropTypes.string
+      text: PropTypes.string,
+      politeness: PropTypes.string
     }
 
     static defaultProps = {
-        politeness: 'polite'
+      politeness: 'polite'
+    }
+
+    componentWillReceiveProps(nextProps) {
+      const currentAnnouncement = this.state.text;
+      let nextAnnouncement = nextProps.text;
+      if (nextAnnouncement === currentAnnouncement) {
+        nextAnnouncement = nextAnnouncement + '\u00A0';
+      }
+      this.setState(prevState => ({
+        text: nextAnnouncement
+      }));
     }
 
     defaultStyles = {
@@ -29,16 +48,15 @@ class Announcer extends Component {
     render() {
         const { className, text, politeness } = this.props;
         const styles = className ? {} : this.defaultStyles;
-
         return (
-            <div 
+            <div
                 aria-live={politeness}
                 style={styles}
                 className={className}
             >
                 {
-                    text.length ?
-                    <p>{text}</p> :
+                    this.state.text.length ?
+                    <p>{this.state.text}</p> :
                     null
                 }
             </div>

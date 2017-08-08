@@ -14,15 +14,9 @@ class App extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick(announcementText) {
-    const currentAnnouncement = this.state.announcement;
-
-    if (announcementText === currentAnnouncement) {
-      announcementText = announcementText + '\u00A0';
-    }
-
+  handleClick() {
     this.setState(prevState => ({
-      announcement: announcementText
+      announcement: 'Here\'s a new announcement!'
     }));
   }
 
@@ -32,7 +26,7 @@ class App extends Component {
         <Announcer text={this.state.announcement} />
         <div className="App-header">
           <h2>Basic Announcer Example</h2>
-          <button type="button" onClick={ () => this.handleClick('Here\'s a new announcement!')}>Trigger new announcement</button>
+          <button type="button" onClick={this.handleClick}>Trigger new announcement</button>
         </div>
       </div>
     );
