@@ -4,14 +4,14 @@
 
 ## Building and running the demo
 
-We included a demo application that shows you how the component will behave when added to a page. To run the demo:
+We included an demo example that shows you how the component will behave when added to a page. To run the demo:
 
 * Clone this repo locally
-* cd into the `demo` directory
+* cd into the `examples` directory
 * run `npm install`
 * run `npm run start`
 
-This will launch your browser, where the demo page will be displayed (at http://localhost:3000).
+This will launch a server, with a link to the demo page (at http://localhost:3000).
 
 Press the "Trigger new announcement" button to add the announcement to the page.
 
