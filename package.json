@@ -7,6 +7,8 @@
     "start": "webpack-dev-server --inline --hot --host 127.0.0.1 --content-base examples/",
     "build": "rimraf dist && mkdirp dist && babel src -d dist",
     "test": "jest",
+    "test:jest": "jest",
+    "test:a11y": "webpack-dev-server --inline --hot --host 127.0.0.1 --content-base test/",
     "prepublish": "npm run build"
   },
   "files": [

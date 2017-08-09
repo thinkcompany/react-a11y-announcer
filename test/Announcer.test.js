@@ -1,5 +1,5 @@
 import React from 'react';
-import Announcer from './Announcer';
+import Announcer from '../src/Announcer';
 import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
 
