@@ -3,7 +3,6 @@ var path = require('path');
 var webpack = require('webpack');
 
 var EXAMPLES_DIR = path.resolve(__dirname, 'examples');
-var TEST_DIR = path.resolve(__dirname, 'test');
 
 function isDirectory(dir) {
   return fs.lstatSync(dir).isDirectory();
@@ -18,9 +17,6 @@ function buildEntries() {
 
     if (!isDraft && isDirectory(path.join(EXAMPLES_DIR, dir)))
       entries[dir] = path.join(EXAMPLES_DIR, dir, 'app.js');
-
-    if (!isDraft && isDirectory(path.join(EXAMPLES_DIR, dir)))
-      entries[dir] = path.join(TEST_DIR, 'app.js');
 
     return entries;
   }, {});
