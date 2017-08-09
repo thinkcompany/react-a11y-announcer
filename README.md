@@ -1,6 +1,6 @@
 # react-a11y-announcer
 
-`react-a11y-announcer` is a React a11y component that helps ensure announcements are accessible and properly announced by screen readers. 
+`react-a11y-announcer` is a React a11y component created by Think Company that helps ensure announcements are accessible and properly announced by screen readers. 
 
 ## Building and running the demo
 
