@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --inline --hot --host 127.0.0.1 --content-base examples/",
     "build": "rimraf dist && mkdirp dist && babel src -d dist",
-    "test": "jest",
+    "test": "concurrently \"npm run test:jest\" \"npm run test:a11y\"",
     "test:jest": "jest",
     "test:a11y": "webpack-dev-server --inline --hot --host 127.0.0.1 --content-base test/",
     "prepublish": "npm run build"
@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/thinkcompany/react-a11y-announcer#readme",
   "dependencies": {
+    "concurrently": "^3.5.0",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
