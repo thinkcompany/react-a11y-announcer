@@ -10,10 +10,10 @@ function isDirectory(dir) {
 
 function buildEntries() {
   return fs.readdirSync(EXAMPLES_DIR).reduce(function (entries, dir) {
+    var isDraft = dir.charAt(0) === '_';
+
     if (dir === 'build')
       return entries;
-
-    var isDraft = dir.charAt(0) === '_';
 
     if (!isDraft && isDirectory(path.join(EXAMPLES_DIR, dir)))
       entries[dir] = path.join(EXAMPLES_DIR, dir, 'app.js');
@@ -33,7 +33,7 @@ module.exports = {
     publicPath: '/__build__/'
   },
 
-    module: {
+  module: {
     rules: [
         {
         test: /\.js$/,
@@ -43,7 +43,7 @@ module.exports = {
         }
         }
     ]
-    },
+  },
 
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({name: 'shared', minChunks: Infinity})

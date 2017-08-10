@@ -1,0 +1,39 @@
+body {
+  background: #eee;
+}
+
+.App {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+
+}
+
+.cards-row {
+  display: flex;
+  align-content: center;
+}
+
+.card {
+  margin-right: 15px;
+  border: 1px solid #bdbdbd;
+  background: #009688;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card button {
+  border-radius: 0;
+  border: 0;
+  background: #fff;
+  cursor: pointer;
+}
+
+
+.card p {
+  margin: 0 0 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+}

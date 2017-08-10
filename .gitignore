@@ -2,3 +2,4 @@
 /dist
 yarn.lock
 demo/src/dist
+npm-debug.log
