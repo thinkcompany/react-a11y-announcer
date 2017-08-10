@@ -12,10 +12,11 @@ body {
 .cards-row {
   display: flex;
   align-content: center;
+  flex-wrap: wrap;
 }
 
 .card {
-  margin-right: 15px;
+  margin: 0 15px 15px 0;
   border: 1px solid #bdbdbd;
   background: #009688;
 }

@@ -14,6 +14,7 @@ class App extends Component {
         {name:'Cindy Clawford'},
         {name:'Guy Purri'},
         {name:'Chester Fishington'},
+        {name:'Bing Clawsby'},
       ]
     }
 
