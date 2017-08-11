@@ -15,12 +15,20 @@ class App extends Component {
     }
 
     this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
   }
 
   openModal() {
     this.setState(prevState => ({
       announcement: 'A modal has opened',
       modalActive: true
+    }));
+  }
+
+  closeModal() {
+    this.setState(prevState => ({
+      announcement: 'Modal closed',
+      modalActive: false
     }));
   }
 
@@ -43,7 +51,7 @@ class App extends Component {
         <div className={modalClasses}>
           <h2>This is a modal</h2>
           <p>There should be some content here, and a button below</p>
-          <button ref={(input) => { this.nameInput = input; }} >Close the modal</button>
+          <button onClick={this.closeModal} ref={(input) => { this.nameInput = input; }} >Close the modal</button>
         </div>
       </div>
     );
