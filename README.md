@@ -1,21 +1,65 @@
 # react-a11y-announcer
 
-Welcome to React Announcer from Think Company.
-
-This is a React component that demonstrates how to dynamically add announcements to a web page, and ensure that they are accessible and announced properly by screen readers.
+`react-a11y-announcer` is a React a11y component created by Think Company that helps ensure announcements are accessible and properly announced by screen readers. 
 
 ## Building and running the demo
 
-We included a demo, a standard `create-react-app` application, that shows you how the component will behave when added to a page. To run the demo:
+We included an example that shows you how the component will behave when added to a page. To run the demo:
 
 * Clone this repo locally
-* cd into the `demo` directory
+* cd into the `examples` directory
 * run `npm install`
 * run `npm run start`
 
-This will launch your browser, where the demo page will be displayed (at http://localhost:3000).
+This will start a server. Open a browser window and navigate to the localhost url displayed in the console output (usually [http://localhost:8080/](http://localhost:8080). 
 
 Press the "Trigger new announcement" button to add the announcement to the page.
+
+## Using the Announcer 
+
+**Install from npm**
+
+`npm install react-a11y-announcer --save`
+
+**Import Announcer**
+
+```javascript
+
+import Announcer from 'react-a11y-announcer';
+
+```
+
+**Create a state to pass to the announcer's props**
+
+```javascript
+  this.state = {
+    announcement: ''
+  }
+```
+
+**Add the announcer to your template**
+
+```html
+  <div className="App">
+    <Announcer text={this.state.announcement} />
+    <div className="App-header">
+      <h2>Basic Announcer Example</h2>
+      <button type="button" onClick={this.handleClick}>Trigger new announcement</button>
+    </div>
+  </div>
+```
+
+**Update the state you passed to the text prop**
+
+```javascript
+  handleClick() {
+    this.setState(prevState => ({
+      announcement: 'Here\'s a new announcement!'
+    }));
+  }
+```
+
+Whenever a user with a screenreader clicks on that button, they should hear the announcement.
 
 ## Browser Testing
 
