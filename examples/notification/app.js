@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-
+import PropTypes from 'prop-types';
 import Announcer from '../../src/Announcer';
 
 class App extends Component {
@@ -9,37 +9,65 @@ class App extends Component {
     super(props);
 
     this.state = {
-      announcement: ''
+      announcement: '',
+      notification: ''
     }
 
-    this.handleClick = this.handleClick.bind(this);
+    this.createNotification = this.createNotification.bind(this);
   }
 
-  handleClick() {
+  createNotification() {
     this.setState(prevState => ({
-      announcement: 'Here\'s a new announcement!'
+      announcement: 'Here is a notification!',
+      notification: 'Here is a notification!'
     }));
+
+    setTimeout(()=> {
+      this.setState(prevState => ({
+        notification: ''
+      }));
+    }, 2000);
   }
 
   render() {
+
     return (
       <div className="App">
-        <Announcer text={this.state.announcement} />
+
         <div className="App-header">
           <h2>Notification Example</h2>
-          <Notification />
-          <button type="button" onClick={this.handleClick}>Launch Notification</button>
+          <Notification text={this.state.notification} />
+          <button type="button" onClick={this.createNotification}>Launch Notification</button>
         </div>
       </div>
     );
   }
 }
 
-class Notification extends React.Component {
+class Notification extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      text: ''
+    }
+  }
+
+  static propTypes = {
+    text: PropTypes.string
+  }
+
   render() {
+    const text = this.props.text;
+    const classes = this.props.text.length ? 'notification is-active' : 'notification';
     return (
-      <div className="notification">
-        This is a notification
+      <div className={classes}>
+        {
+            text.length ?
+            <p>{text}</p> :
+            null
+        }
+        <Announcer text={this.props.text} />
       </div>
     );
   }
