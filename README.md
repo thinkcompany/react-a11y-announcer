@@ -4,14 +4,14 @@
 
 ## Building and running the demo
 
-We included an demo example that shows you how the component will behave when added to a page. To run the demo:
+We included an example that shows you how the component will behave when added to a page. To run the demo:
 
 * Clone this repo locally
 * cd into the `examples` directory
 * run `npm install`
 * run `npm run start`
 
-This will launch a server, with a link to the demo page (at http://localhost:3000).
+This will start a server. Open a browser window and navigate to the localhost url displayed in the console output (usually [http://localhost:8080/](http://localhost:8080). 
 
 Press the "Trigger new announcement" button to add the announcement to the page.
 
