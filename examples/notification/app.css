@@ -1,0 +1,18 @@
+.App {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+
+}
+
+.notification {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: inline-block;
+  padding: 15px;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  background: #6a1b9a;
+}

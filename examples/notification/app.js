@@ -27,12 +27,24 @@ class App extends Component {
         <Announcer text={this.state.announcement} />
         <div className="App-header">
           <h2>Notification Example</h2>
-          <button type="button" onClick={this.handleClick}>Trigger new announcement</button>
+          <Notification />
+          <button type="button" onClick={this.handleClick}>Launch Notification</button>
         </div>
       </div>
     );
   }
 }
+
+class Notification extends React.Component {
+  render() {
+    return (
+      <div className="notification">
+        This is a notification
+      </div>
+    );
+  }
+}
+
 
 ReactDOM.render(<App/>, document.getElementById('container'))
 
