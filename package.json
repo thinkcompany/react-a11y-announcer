@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/Announcer.js",
   "scripts": {
-    "start": "webpack-dev-server --inline --hot --host 127.0.0.1 --content-base examples/",
+    "start": "webpack-dev-server",
     "build": "rimraf dist && mkdirp dist && babel src -d dist",
     "test": "jest",
     "prepublish": "npm run build"

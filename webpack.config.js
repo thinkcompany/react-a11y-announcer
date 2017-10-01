@@ -32,21 +32,29 @@ module.exports = {
     path: EXAMPLES_DIR + '/__build__',
     publicPath: '/__build__/'
   },
-
     module: {
     rules: [
         {
-        test: /\.js$/,
-        exclude: /(node_modules)/,
-        use: {
-            loader: 'babel-loader'
-        }
+          test: /\.js$/,
+          exclude: /(node_modules)/,
+          use: {
+              loader: 'babel-loader'
+          }
         }
     ]
     },
 
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({name: 'shared', minChunks: Infinity})
-  ]
-
+  ],
+  devServer: {
+    host: '0.0.0.0',
+    contentBase: 'examples/',
+    port: 8080,
+    disableHostCheck: true,
+    inline: false,
+    hot: true
+  }
 };
+
+///--inline --hot --content-base examples/
