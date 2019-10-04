@@ -1,6 +1,6 @@
 # react-a11y-announcer
 
-`react-a11y-announcer` is a React a11y component created by Think Company that helps ensure announcements are accessible and properly announced by screen readers. 
+`react-a11y-announcer` is a React a11y component created by Think Company that helps ensure announcements are accessible and properly announced by screen readers.
 
 ## Building and running the demo
 
@@ -9,13 +9,13 @@ We included an example that shows you how the component will behave when added t
 * Clone this repo locally
 * cd into the `examples` directory
 * run `npm install`
-* run `npm run start`
+* run `npm start`
 
-This will start a server. Open a browser window and navigate to the localhost url displayed in the console output (usually [http://localhost:8080/](http://localhost:8080). 
+This will start a server. Open a browser window and navigate to the localhost url displayed in the console output (usually [http://localhost:8080/](http://localhost:8080).
 
 Press the "Trigger new announcement" button to add the announcement to the page.
 
-## Using the Announcer 
+## Using the Announcer
 
 **Install from npm**
 

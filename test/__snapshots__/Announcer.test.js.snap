@@ -1,28 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component is created 1`] = `
-<div
-  aria-live="polite"
-  className={undefined}
-  style={
-    Object {
-      "border": "0",
-      "clip": "rect(0px, 0px, 0px, 0px)",
-      "clipPath": "polygon(0px 0px, 0px 0px, 0px 0px, 0px 0px)",
-      "display": "block",
-      "height": "1px",
-      "margin": "-1px",
-      "overflow": "hidden",
-      "padding": "0",
-      "position": "absolute",
-      "visibility": "visible",
-      "whiteSpace": "nowrap",
-      "width": "1px",
-    }
-  }
->
-  <p>
-    This is an announcement!
-  </p>
-</div>
-`;
+exports[`Component is created 1`] = `"<div aria-atomic=\\"true\\" aria-live=\\"polite\\" style=\\"position: absolute; visibility: visible; overflow: hidden; display: block; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: polygon(0px 0px, 0px 0px, 0px 0px, 0px 0px); white-space: nowrap;\\" class=\\"\\"></div>"`;
