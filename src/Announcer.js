@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 class Announcer extends Component {
     constructor(props) {
       super(props);
-  
+
       this.state = {
         text: ''
       }
@@ -16,17 +16,18 @@ class Announcer extends Component {
     }
 
     static defaultProps = {
+      className: '',
       politeness: 'polite'
     }
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
       const currentAnnouncement = this.state.text;
       let nextAnnouncement = nextProps.text;
-  
+
       if (nextAnnouncement === currentAnnouncement) {
         nextAnnouncement = nextAnnouncement + '\u00A0';
       }
-  
+
       this.setState(prevState => ({
         text: nextAnnouncement
       }));

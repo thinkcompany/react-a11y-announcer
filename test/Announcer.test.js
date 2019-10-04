@@ -1,13 +1,13 @@
-import React from 'react';
+import Adapter from 'enzyme-adapter-react-16';
 import Announcer from '../src/Announcer';
-import renderer from 'react-test-renderer';
-import { shallow } from 'enzyme';
+import React from 'react';
+import { configure, shallow, mount } from 'enzyme';
+
+configure({ adapter: new Adapter() });
 
 test('Component is created', () => {
-  const wrapper = renderer.create(
-    <Announcer text="This is an announcement!" />
-  );
-  let tree = wrapper.toJSON();
+  const wrapper = mount(<Announcer text="This is an announcement!" />);
+  let tree = wrapper.html();
   expect(tree).toMatchSnapshot();
 });
 
