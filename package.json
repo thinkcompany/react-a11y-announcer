@@ -23,10 +23,10 @@
     "url": "https://github.com/thinkcompany/react-a11y-announcer/issues"
   },
   "homepage": "https://github.com/thinkcompany/react-a11y-announcer#readme",
-  "dependencies": {
-    "prop-types": "^15.7.2",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2"
+  "peerDependencies": {
+    "prop-types": "15.x",
+    "react": "16.x",
+    "react-dom": "16.x"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.2",
@@ -41,6 +41,9 @@
     "enzyme-adapter-react-16": "^1.14.0",
     "jest": "^24.9.0",
     "mkdirp": "^0.5.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
     "rimraf": "^3.0.0",
     "webpack": "^4.41.0",
     "webpack-cli": "^3.3.9",
