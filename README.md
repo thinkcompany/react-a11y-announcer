@@ -1,5 +1,5 @@
 # react-a11y-announcer
-[![Maintainability](https://api.codeclimate.com/v1/badges/b4a09df160caabda6232/maintainability)](https://codeclimate.com/github/thinkcompany/react-a11y-announcer/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/b4a09df160caabda6232/maintainability)](https://codeclimate.com/github/thinkcompany/react-a11y-announcer/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/b4a09df160caabda6232/test_coverage)](https://codeclimate.com/github/thinkcompany/react-a11y-announcer/test_coverage)
 
 `react-a11y-announcer` is a React a11y component created by Think Company that helps ensure announcements are accessible and properly announced by screen readers.
 
