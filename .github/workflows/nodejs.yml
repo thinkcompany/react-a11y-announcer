@@ -7,13 +7,10 @@ on: [push, pull_request]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
         node-version: [10.x, 12.x]
-
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
@@ -25,3 +22,7 @@ jobs:
     - run: npm test
       env:
         CI: true
+    - name: Publish code coverage
+      uses: paambaati/codeclimate-action@v2.7.1
+      env:
+        CC_TEST_REPORTER_ID: d29d46e713a8032e10aeb6c86c0be41e386279df0660ea2daa0272454f4d6f7a
