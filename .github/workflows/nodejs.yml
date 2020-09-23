@@ -22,7 +22,19 @@ jobs:
     - run: npm test
       env:
         CI: true
-    - name: Publish code coverage
-      uses: paambaati/codeclimate-action@v2.7.1
+  coverage:
+    needs: [build]
+    name: coverage
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - uses: actions/setup-node@master
+      with:
+        node-version: '12'
+    - run: npm install
+    - run: npm run build
+    - uses: paambaati/codeclimate-action@v2.5.7
       env:
         CC_TEST_REPORTER_ID: 66ad9bcd122cdc5fc9c8eced749d32e29e3a82804f27e6199c16de22e2de2a51
+      with:
+        coverageCommand: npm run test
